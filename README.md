@@ -1,1 +1,3 @@
-# Quiz1-Android-Kotlin
+# Quiz1
+## Android
+## Programming Language: Kotlin
