@@ -4,9 +4,30 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
+import android.widget.Toast
 import com.example.zeeshan.quiz1.adapters.FragmentViewPagerAdapter
+import com.example.zeeshan.quiz1.interfaces.FragmentTwoInteraction
+import com.example.zeeshan.quiz1.interfaces.FragmentOneInteraction
+import com.example.zeeshan.quiz1.models.User
 
 class MainActivity : AppCompatActivity() {
+
+    var recieveDataInteraction : FragmentTwoInteraction? = null
+
+//    override fun sendData(user: User){
+//        Toast.makeText(this, user.toString(), Toast.LENGTH_SHORT).show()
+//
+//        recieveDataInteraction?.recieveData(user)
+//
+//    }
+    override fun sendData(user: User) {
+        Toast.makeText(this, user.toString(), Toast.LENGTH_SHORT).show()
+
+        recieveDataInteraction?.recieveData(user)
+    }
+    public fun setInteractionTwo(interactionTwo: FragmentTwoInteraction) {
+        this.recieveDataInteraction = interactionTwo
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
