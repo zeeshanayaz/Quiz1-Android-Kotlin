@@ -10,7 +10,7 @@ import com.example.zeeshan.quiz1.interfaces.FragmentTwoInteraction
 import com.example.zeeshan.quiz1.interfaces.FragmentOneInteraction
 import com.example.zeeshan.quiz1.models.User
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), FragmentOneInteraction {
 
     var recieveDataInteraction : FragmentTwoInteraction? = null
 
